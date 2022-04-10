@@ -1,0 +1,67 @@
+<!-- navbar du site : -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../monCompte/">App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" id="acceuil" aria-current="page" href="../monCompte/?page=acceuil_postItCommun">Post-it commun</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="postItPrivé" href="../monCompte/?page=acceuil_mesPostIt">Mes Post-it</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="autres" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Compte
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="../monCompte/?page=monCompteInfos">Mon Compte</a></li>
+                        <li><a class="dropdown-item" href="../monCompte/?page=admin">Admin</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="../deconnexion.php">Déconnexion</a></li>
+                    </ul>
+                  </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<script>
+    // recuperation du rapamettre page dans l'URL
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var page = url.searchParams.get("page");
+    
+    //Les differents page :
+    let acceuil = document.getElementById('acceuil');
+    let postItPrivé = document.getElementById('postItPrivé');
+    let autres = document.getElementById('autres');
+
+
+    // changement en fonction du paramettre
+    switch(page){
+        case null:
+            acceuil.classList.add("active");
+            break;
+        case 'acceuil_postItCommun':
+            acceuil.classList.add("active");
+            break;
+        case 'acceuil_mesPostIt':
+            postItPrivé.classList.add("active");    
+            break;
+        case 'monCompteInfos':
+            autres.classList.add("active");
+            break;
+        case 'admin':
+            autres.classList.add("active");
+            break;
+    }
+</script>
+
+
+
