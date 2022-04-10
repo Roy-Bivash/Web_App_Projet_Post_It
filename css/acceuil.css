@@ -1,0 +1,65 @@
+body{
+    background-color: #cfdae4;
+}
+
+
+
+/* Style de la partie titre */
+.titre{
+    text-transform: uppercase;
+    text-align: center;
+    /* margin-top: 20px; */
+}
+.titre hr{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titre h4{
+    margin-bottom: 30px;
+}
+
+
+/* Style de chaque carte/Post-it */
+.num{
+    text-align: end;
+}
+.nom{
+    color: #797979;
+}
+.date{
+    color: #919191;
+    text-align: center;
+}
+.gravite{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+/* Style des boutton creation / modification / supression de post-it */
+.btnPostIt{
+    text-align: center;
+}
+.btnPostIt a{
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+.btnPostIt a:hover{
+    color: rgb(209, 72, 72);
+}
+
+
+
+
+
+/* Style de la page profile */
+#imgProfile{
+    width: 40%; /* taille de l'image */
+    border: solid 10px gray; /* contoure de l'image */
+    border-radius: 50%; /* forme de l'image */
+    padding: 1px;/* espace entre l'image le contoure */
+}
+
